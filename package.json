@@ -6,6 +6,7 @@
     },
     "description": "get to know Paras via `npx paras007`",
     "dependencies": {
+        "chalk": "^4.1.0",
         "cli-welcome": "2.2.2"
     },
     "keywords": [
