@@ -14,5 +14,11 @@
         "paras007"
     ],
     "repository": "Paras-code-007/paras007",
-    "license": "MIT"
+    "main": "index.js",
+    "license": "MIT",
+    "author": {
+        "name": "Paras Arora",
+        "email": "paras.arora0025@gmail.com",
+        "url": "https://twitter.com/paras0025"
+    }
 }
