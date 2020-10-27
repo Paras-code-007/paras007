@@ -49,25 +49,24 @@ ${chalk.italic(`An aspiring enthusiast
 A key learner, want to gather as much information as i can
 `)}
 ${chalk.keyword('orange').inverse.bold(' Some key Projects: ')}
-${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline('http://shopvela.herokuapp.com/')}
+${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline.dim('http://shopvela.herokuapp.com/')}
 
 ${chalk.bold.underline('Profile links')}
-${chalk.inverse.bold.hex('#6cc644')(' Github: ')} https://github.com/Paras-code-007
-${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} https://twitter.com/paras0025
-${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} https://www.linkedin.com/in/paras-arora-343470197/
-${chalk.bold.bgYellow(' Portfolio: ')} http://parascode007.com
+${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
+${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
+${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
+${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
 `)
 
 //alerts
-const success= chalk.bold.green
-const info= chalk.bold.hex('#6937FF')
-const warning= chalk.bold.keyword('orange')
-const error= chalk.bold.red
+// const success= chalk.bold.green
+// const info= chalk.bold.hex('#6937FF')
+// const warning= chalk.bold.keyword('orange')
+// const error= chalk.bold.red
 
-console.log(`
-${logSymbols.success} ${success(' SUCCESS: ')} Thanks for checking out, like then visit my portfolio
-${logSymbols.info} ${info(' INFO: ')} Studying btech and looking for internships to grow as a developer
-${logSymbols.warning} ${warning(' WARNING: ')} Never underestimate me
-${logSymbols.error} ${error(' ERROR: ')} Invalid request, plz visit my github first 
-`)
-
+// console.log(`
+// ${logSymbols.success} ${success(' SUCCESS: ')} Thanks for checking out, like then visit my portfolio
+// ${logSymbols.info} ${info(' INFO: ')} Studying btech and looking for internships to grow as a developer
+// ${logSymbols.warning} ${warning(' WARNING: ')} Never underestimate me
+// ${logSymbols.error} ${error(' ERROR: ')} Invalid request, plz visit my github first 
+// `)
