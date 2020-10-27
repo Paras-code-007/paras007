@@ -34,7 +34,7 @@ welcome({
     bgColor: `#708090`,
 	color: `#000000`,
 	bold: true,
-	clear: false,
+	clear: true,
     version: `${pkgJSON.version}`,
     description: pkgJSON.description
 })
