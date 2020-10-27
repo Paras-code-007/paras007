@@ -5,5 +5,7 @@
         "paras007": "index.js"
     },
     "description": "get to know Paras via `npx paras007`",
-    "dependencies": {}
+    "dependencies": {
+        "cli-welcome": "2.2.2"
+    }
 }

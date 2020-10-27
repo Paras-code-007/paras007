@@ -14,12 +14,30 @@
 const pkgJSON= require('./package.json')
 // in nodejs when we require a json file it converts json into js object
 
+// npm i cli-welcome --save-exact
+// npm i cli-welcome --save
+// to save its exact version or to save it to production dependencies (which are deafults to npm install)
 
-console.log(`
-NAME: ${pkgJSON.name}
-VERSION: ${pkgJSON.version}
-DESCRIPTION: ${pkgJSON.description}
-`)
+
+//+ for welcome message use cli-welcome
+// console.log(`
+// NAME: ${pkgJSON.name}
+// VERSION: ${pkgJSON.version}
+// DESCRIPTION: ${pkgJSON.description}
+// `)
+
+const welcome= require('cli-welcome')
+
+welcome({
+    title: "paras007",
+    tagLine: "run `npx paras007` to get know about me",
+    bgColor: `#708090`,
+	color: `#000000`,
+	bold: true,
+	clear: false,
+    version: `${pkgJSON.version}`,
+    description: pkgJSON.description
+})
 
 console.log(`
 Paras Arora - WEB DEVELOPER | AR VR Enthusiast
