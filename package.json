@@ -4,7 +4,6 @@
     "bin": {
         "paras007": "index.js"
     },
-    "dependencies": {
-        "clear-any-console": "^1.16.2"
-    }
+    "description": "get to know Paras via `npx paras007`",
+    "dependencies": {}
 }

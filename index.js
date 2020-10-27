@@ -6,8 +6,20 @@
 // process.stdout.write(process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H')
 // if we isntall pkg for the same
 
-const clearconsole= require('clear-any-console')
-clearconsole()
+//clears the console using clear-any-console pkg
+// const clearconsole= require('clear-any-console')
+// clearconsole()
+
+// use feilds inside pkgjson file by requiring it after all its a json/js file
+const pkgJSON= require('./package.json')
+// in nodejs when we require a json file it converts json into js object
+
+
+console.log(`
+NAME: ${pkgJSON.name}
+VERSION: ${pkgJSON.version}
+DESCRIPTION: ${pkgJSON.description}
+`)
 
 console.log(`
 Paras Arora - WEB DEVELOPER | AR VR Enthusiast
