@@ -34,6 +34,18 @@ const checkNode= require('node-vercheck')
 
 // checkNode('10',{exit: false})
 
+// handling errors like promise rejected when it should not be and we did not provide any catch to handle it
+//+ handling errors using cli
+process.on('unhandledRejection',(err)=>{
+    console.log('unhandledRejection')
+    console.log(err.name)
+    console.log(err.message)
+    console.log(err.stack)
+})
+// +handling rejection in my way 
+
+
+
 welcome({
     title: "paras007",
     tagLine: "run `npx paras007` to get know about me",
@@ -47,11 +59,13 @@ welcome({
 
 checkNode('10')
 
-// Promise.reject(new Error('this is unhandled'))
+// to create error of punhandling promise rejection
+Promise.reject(new Error('this is unhandled'))
 
-// Promise(function (resolve,reject) {
+//can use this too
+// const promise= new Promise(function (resolve,reject) {
 //     reject(new Error('This is unhandled'))
-// })
+// })  
 
 console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
