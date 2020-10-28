@@ -29,7 +29,7 @@ const pkgJSON= require('./package.json')
 const welcome= require('cli-welcome')
 const chalk= require('chalk')
 const logSymbols = require('log-symbols')
-
+const alert= require('clialerting')
 
 
 welcome({
@@ -42,6 +42,12 @@ welcome({
     version: `${pkgJSON.version}`,
     description: pkgJSON.description
 })
+
+// Promise.reject(new Error('this is unhandled'))
+
+// Promise(function (resolve,reject) {
+//     reject(new Error('This is unhandled'))
+// })
 
 console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
@@ -58,15 +64,17 @@ ${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https
 ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
 `)
 
-//alerts
+// alerts
 // const success= chalk.bold.green
 // const info= chalk.bold.hex('#6937FF')
 // const warning= chalk.bold.keyword('orange')
 // const error= chalk.bold.red
 
 // console.log(`
-// ${logSymbols.success} ${success(' SUCCESS: ')} Thanks for checking out, like then visit my portfolio
-// ${logSymbols.info} ${info(' INFO: ')} Studying btech and looking for internships to grow as a developer
-// ${logSymbols.warning} ${warning(' WARNING: ')} Never underestimate me
-// ${logSymbols.error} ${error(' ERROR: ')} Invalid request, plz visit my github first 
+// ${logSymbols.success}${success(' SUCCESS: ')} Thanks for checking out, like then visit my portfolio
+// ${logSymbols.info}${info(' INFO: ')} Studying btech and looking for internships to grow as a developer
+// ${logSymbols.warning}${warning(' WARNING: ')} Never underestimate me
+// ${logSymbols.error}${error(' ERROR: ')} Invalid request, plz visit my github first 
 // `)
+
+alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
