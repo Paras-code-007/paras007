@@ -31,19 +31,22 @@ const chalk= require('chalk')
 const logSymbols = require('log-symbols')
 const alert= require('clialerting')
 const checkNode= require('node-vercheck')
+const unhandled= require('cli-handle-unhandled')
 
 // checkNode('10',{exit: false})
 
 // handling errors like promise rejected when it should not be and we did not provide any catch to handle it
 //+ handling errors using cli
-process.on('unhandledRejection',(err)=>{
-    console.log('unhandledRejection')
-    console.log(err.name)
-    console.log(err.message)
-    console.log(err.stack)
-})
+// process.on('unhandledRejection',(err)=>{
+//     console.log('unhandledRejection')
+//     console.log(err.name)
+//     console.log(err.message)
+//     console.log(err.stack)
+// })
 // +handling rejection in my way 
 
+// or use package cli-handle-unhandled which use cli-handle-error package to display error properly
+unhandled()
 
 
 welcome({
