@@ -9,7 +9,8 @@
         "chalk": "^4.1.0",
         "cli-welcome": "2.2.2",
         "clialerting": "^1.0.0",
-        "log-symbols": "^4.0.0"
+        "log-symbols": "^4.0.0",
+        "node-vercheck": "^1.0.0"
     },
     "keywords": [
         "paras",

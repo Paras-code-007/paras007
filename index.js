@@ -30,7 +30,9 @@ const welcome= require('cli-welcome')
 const chalk= require('chalk')
 const logSymbols = require('log-symbols')
 const alert= require('clialerting')
+const checkNode= require('node-vercheck')
 
+// checkNode('10',{exit: false})
 
 welcome({
     title: "paras007",
@@ -42,6 +44,8 @@ welcome({
     version: `${pkgJSON.version}`,
     description: pkgJSON.description
 })
+
+checkNode('10')
 
 // Promise.reject(new Error('this is unhandled'))
 
