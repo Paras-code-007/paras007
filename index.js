@@ -60,7 +60,7 @@ welcome({
 checkNode('10')
 
 // to create error of punhandling promise rejection
-Promise.reject(new Error('this is unhandled'))
+// Promise.reject(new Error('this is unhandled'))
 
 //can use this too
 // const promise= new Promise(function (resolve,reject) {
