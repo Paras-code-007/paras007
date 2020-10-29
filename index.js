@@ -26,12 +26,12 @@ const pkgJSON= require('./package.json')
 // DESCRIPTION: ${pkgJSON.description}
 // `)
 
-const welcome= require('cli-welcome')
+
 const chalk= require('chalk')
 const logSymbols = require('log-symbols')
 const alert= require('clialerting')
-const checkNode= require('node-vercheck')
-const unhandled= require('cli-handle-unhandled')
+
+const init= require('./utils/init')  //requiring the init module
 
 // checkNode('10',{exit: false})
 
@@ -45,22 +45,6 @@ const unhandled= require('cli-handle-unhandled')
 // })
 // +handling rejection in my way 
 
-// or use package cli-handle-unhandled which use cli-handle-error package to display error properly
-unhandled()
-
-
-welcome({
-    title: "paras007",
-    tagLine: "run `npx paras007` to get know about me",
-    bgColor: `#708090`,
-	color: `#000000`,
-	bold: true,
-	clear: true,
-    version: `${pkgJSON.version}`,
-    description: pkgJSON.description
-})
-
-checkNode('10')
 
 // to create error of punhandling promise rejection
 // Promise.reject(new Error('this is unhandled'))
@@ -70,6 +54,8 @@ checkNode('10')
 //     reject(new Error('This is unhandled'))
 // })  
 
+init()
+    
 console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
 ${chalk.italic(`An aspiring enthusiast 
@@ -85,6 +71,8 @@ ${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https
 ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
 `)
 
+alert({type: 'info', name: 'fun fact', msg: 'paras is cool'}) 
+
 // alerts
 // const success= chalk.bold.green
 // const info= chalk.bold.hex('#6937FF')
@@ -98,4 +86,3 @@ ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode00
 // ${logSymbols.error}${error(' ERROR: ')} Invalid request, plz visit my github first 
 // `)
 
-alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
