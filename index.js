@@ -103,7 +103,9 @@ ${social}
 // ${logSymbols.error}${error(' ERROR: ')} Invalid request, plz visit my github first 
 // `)
 
-alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
+if(args.indexOf('--nofact')=== -1){
+    alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
+}
 
 // console.log(args)
 // alert({type: 'info', name: 'Arguements', msg: args})
