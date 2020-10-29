@@ -11,7 +11,7 @@
 // clearconsole()
 
 // use feilds inside pkgjson file by requiring it after all its a json/js file
-const pkgJSON= require('./package.json')
+// const pkgJSON= require('./package.json')
 // in nodejs when we require a json file it converts json into js object
 
 // npm i cli-welcome --save-exact
@@ -26,12 +26,10 @@ const pkgJSON= require('./package.json')
 // DESCRIPTION: ${pkgJSON.description}
 // `)
 
-const welcome= require('cli-welcome')
-const chalk= require('chalk')
-const logSymbols = require('log-symbols')
+const init= require('./utils/init')
+const {bio,socialHandles,projects,fact}= require('./utils/data.js')
 const alert= require('clialerting')
-const checkNode= require('node-vercheck')
-const unhandled= require('cli-handle-unhandled')
+
 const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
 // checkNode('10',{exit: false})
@@ -47,21 +45,6 @@ const args= process.argv.slice(2) //to get only the flags and inputs and alias t
 // +handling rejection in my way 
 
 // or use package cli-handle-unhandled which use cli-handle-error package to display error properly
-unhandled()
-
-
-welcome({
-    title: "paras007",
-    tagLine: "run `npx paras007` to get know about me",
-    bgColor: `#708090`,
-	color: `#000000`,
-	bold: true,
-	clear: true,
-    version: `${pkgJSON.version}`,
-    description: pkgJSON.description
-})
-
-checkNode('10')
 
 // to create error of punhandling promise rejection
 // Promise.reject(new Error('this is unhandled'))
@@ -71,24 +54,13 @@ checkNode('10')
 //     reject(new Error('This is unhandled'))
 // })  
 
-const socialHandles= `
-${chalk.bold.underline('Profile links')}
-${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
-${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
-${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
-${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}`
 
-const social= args.indexOf('--no-social')===-1 ? socialHandles : ``
 
-console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
+// const social= args.indexOf('--no-social')===-1 ? socialHandles : ``
 
-${chalk.italic(`An aspiring enthusiast 
-A key learner, want to gather as much information as i can
-`)}
-${chalk.keyword('orange').inverse.bold(' Some key Projects: ')}
-${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline.dim('http://shopvela.herokuapp.com/')}
-${social}
-`)
+// console.log(`
+// ${social}
+// `)
 
 // alerts
 // const success= chalk.bold.green
@@ -103,9 +75,9 @@ ${social}
 // ${logSymbols.error}${error(' ERROR: ')} Invalid request, plz visit my github first 
 // `)
 
-if(args.indexOf('--nofact')=== -1){
-    alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
-}
+// if(args.indexOf('--nofact')=== -1){
+//     alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
+// }
 
 // console.log(args)
 // alert({type: 'info', name: 'Arguements', msg: args})
@@ -113,3 +85,10 @@ if(args.indexOf('--nofact')=== -1){
 //returns -1 if not found
 
 // console.log(social)  //to check the variable
+
+
+init()
+console.log(bio)
+console.log(projects)
+console.log(socialHandles)
+alert({type: 'info', msg: fact, name: 'fun fact'})
