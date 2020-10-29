@@ -54,25 +54,27 @@ const init= require('./utils/init')  //requiring the init module
 //     reject(new Error('This is unhandled'))
 // })  
 
-init()
+;(()=>{
+    init()
     
-console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
+    console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
-${chalk.italic(`An aspiring enthusiast 
-A key learner, want to gather as much information as i can
-`)}
-${chalk.keyword('orange').inverse.bold(' Some key Projects: ')}
-${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline.dim('http://shopvela.herokuapp.com/')}
+    ${chalk.italic(`An aspiring enthusiast 
+    A key learner, want to gather as much information as i can
+    `)}
+    ${chalk.keyword('orange').inverse.bold(' Some key Projects: ')}
+    ${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline.dim('http://shopvela.herokuapp.com/')}
 
-${chalk.bold.underline('Profile links')}
-${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
-${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
-${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
-${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
-`)
+    ${chalk.bold.underline('Profile links')}
+    ${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
+    ${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
+    ${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
+    ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
+    `)
 
-alert({type: 'info', name: 'fun fact', msg: 'paras is cool'}) 
+    alert({type: 'info', name: 'fun fact', msg: 'paras is cool'}) 
 
+})()
 // alerts
 // const success= chalk.bold.green
 // const info= chalk.bold.hex('#6937FF')
