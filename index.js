@@ -32,6 +32,7 @@ const logSymbols = require('log-symbols')
 const alert= require('clialerting')
 const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
+const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
 // checkNode('10',{exit: false})
 
@@ -70,6 +71,15 @@ checkNode('10')
 //     reject(new Error('This is unhandled'))
 // })  
 
+const socialHandles= `
+${chalk.bold.underline('Profile links')}
+${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
+${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
+${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
+${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}`
+
+const social= args.indexOf('--no-social')===-1 ? socialHandles : ``
+
 console.log(`${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
 ${chalk.italic(`An aspiring enthusiast 
@@ -77,12 +87,7 @@ A key learner, want to gather as much information as i can
 `)}
 ${chalk.keyword('orange').inverse.bold(' Some key Projects: ')}
 ${chalk.bold.keyword('red')('Shopvela')}: ${chalk.underline.dim('http://shopvela.herokuapp.com/')}
-
-${chalk.bold.underline('Profile links')}
-${chalk.inverse.bold.hex('#6cc644')(' Github: ')} ${chalk.dim.underline('https://github.com/Paras-code-007')}
-${chalk.inverse.bold.hex('#1da1f2')(' Twitter: ')} ${chalk.dim.underline('https://twitter.com/paras0025')}
-${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https://www.linkedin.com/in/paras-arora-343470197/')}
-${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}
+${social}
 `)
 
 // alerts
@@ -99,3 +104,10 @@ ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode00
 // `)
 
 alert({type: 'info', name: 'fun fact', msg: 'paras is cool'})
+
+// console.log(args)
+// alert({type: 'info', name: 'Arguements', msg: args})
+// console.log(args.indexOf('--no-social'))
+//returns -1 if not found
+
+// console.log(social)  //to check the variable
