@@ -20,6 +20,10 @@
     ],
     "repository": "Paras-code-007/paras007",
     "main": "index.js",
+    "files": [
+        "index.js",
+        "utils"
+    ],
     "license": "MIT",
     "author": {
         "name": "Paras Arora",

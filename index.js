@@ -86,9 +86,12 @@ const args= process.argv.slice(2) //to get only the flags and inputs and alias t
 
 // console.log(social)  //to check the variable
 
+(()=>{
 
-init()
-console.log(bio)
-console.log(projects)
-console.log(socialHandles)
-alert({type: 'info', msg: fact, name: 'fun fact'})
+    init()
+    console.log(bio)
+    console.log(projects)
+    console.log(socialHandles)
+    alert({type: 'info', msg: fact, name: 'fun fact'})
+
+})()
