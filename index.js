@@ -6,8 +6,7 @@ const alert= require('clialerting')
 
 const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
-
-(()=>{
+;(async ()=>{
 
     init()
     console.log(bio)
