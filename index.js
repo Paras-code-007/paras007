@@ -32,6 +32,7 @@ const logSymbols = require('log-symbols')
 const alert= require('clialerting')
 const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
+const handleError= require('cli-handle-error')
 
 // checkNode('10',{exit: false})
 
@@ -61,6 +62,22 @@ welcome({
 })
 
 checkNode('10')
+
+// process.exit() //exits with code 0
+// process.exit(1) //exits with code 1 (failure)
+
+// error
+const err= new Error('Something went wrong')   //we can extend it  to create a particular error message with differrent name
+/*+ 
+// console.log('err',err)
+console.log('NAME',err.name)
+console.log('MESSAGE',err.message)
+// console.log('STACK',err.stack)
+// since error therfore exit with 1
+process.exit(1)
+*/
+//+ can use node module cli-handle-erorr which take a error object and displays it
+handleError('Custom error name',err,false,false)  //(custom error name, error object, display error, exit on error)
 
 // to create error of punhandling promise rejection
 // Promise.reject(new Error('this is unhandled'))
