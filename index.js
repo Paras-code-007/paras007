@@ -5,7 +5,6 @@ const {bio,socialHandles,projects,fact}= require('./utils/data.js')
 const cli= require('./utils/cli')
 const debug= require('./utils/debug.js')
 const alert= require('clialerting')
-const { input } = require('./utils/cli')
 
 const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
@@ -18,5 +17,8 @@ const args= process.argv.slice(2) //to get only the flags and inputs and alias t
     if(cli.flags.projects) console.log(projects)
     if(cli.flags.social) console.log(socialHandles)        
     if(cli.flags.fact) alert({type: 'info', msg: fact, name: 'fun fact'})
-    debug(cli.flags.debug, cli.input, cli.flags)
+    debug(cli.flags.debug, cli.flags, cli.input)
 })()
+
+// note capital alias are not part 
+// we have to mention them too
