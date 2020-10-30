@@ -7,7 +7,14 @@ const meow= require('meow')
 
 const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
-const helptext= `Run npx paras007`
+const helptext= `Run npx paras007
+
+Flags
+--bio -b to display bio, default true
+--projects -p to display projects, default true
+--social -s to display socialHandles, default true
+--fact -f to display funfact, default true
+use --no-flag or -alias-f to set these flags to false`
 const options= {
     flags: {
         bio: {
