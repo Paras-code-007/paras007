@@ -26,7 +26,12 @@ ${green('npx paras007')} ${cyan('--no-fact')}
 ${green('npx paras007')} ${cyan('--fact')}
 `
 
+
 const options= {
+    // inferType: true, //from the innput pass infer then type and the store that in that type but if set to false which is default it stores every input to string
+    hardRejection: false, //by default true but we are handling error with unhandled()function therfore we don ot need it 
+    // this is doing same as process.on('unhandledRejection,function)
+    // cli handle unhanldle with handle error for me now not meow pkg
     flags: {
         bio: {
             type: 'boolean',
