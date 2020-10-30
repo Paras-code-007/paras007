@@ -1,24 +1,29 @@
 const meow= require('meow')
+const {green, yellow, cyan}= require('chalk')
 
+//since string is template literal therfore use js in it by using ${}
 const helptext= `
 Usage
-npx paras007 [options]
+${green('npx paras007')} ${cyan('[--options]')} ${yellow('<input>')}
 
 Flags/Options + alias
---bio, -b          : to display bio, default true
---projects, -p     : to display projects, default true
---social, -s       : to display socialHandles, default true
---fact, -f         : to display funfact, default true
---debug, -d           : to debug the cli
---help            : for help
---version, -V         : for pkg version
+${cyan('--bio')},${cyan(' -b')}           : to display bio, default true
+${cyan('--projects')},${cyan(' -p')}      : to display projects, default true
+${cyan('--social')},${cyan(' -s')}        : to display socialHandles, default true
+${cyan('--fact')},${cyan(' -f')}          : to display funfact, default true
+${cyan('--debug')},${cyan(' -d')}         : to debug the cli
+${cyan('--help')}              : for help
+${cyan('--version')},${cyan(' -V')}       : for pkg/CLI version
+
+Inputs/Commands
+${yellow('help')}                : for help
 
 Examples
 use --no-flag or -alias-f to set these flags to false
-npx paras007 --no-social
-npx paras007 --social
-npx paras007 --no-fact
-npx paras007 --fact
+${green('npx paras007')} ${cyan('--no-social')}
+${green('npx paras007')} ${cyan('--social')}
+${green('npx paras007')} ${cyan('--no-fact')}
+${green('npx paras007')} ${cyan('--fact')}
 `
 
 const options= {
