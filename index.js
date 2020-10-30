@@ -7,14 +7,27 @@ const meow= require('meow')
 
 const args= process.argv.slice(2) //to get only the flags and inputs and alias to flags
 
-const helptext= `Run npx paras007
+const helptext= `
+Usage
+npx paras007 [options]
 
-Flags
+Flags/Options + alias
 --bio -b to display bio, default true
 --projects -p to display projects, default true
 --social -s to display socialHandles, default true
 --fact -f to display funfact, default true
-use --no-flag or -alias-f to set these flags to false`
+--help for help
+--version for pkg version
+
+Examples
+use --no-flag or -alias-f to set these flags to false
+npx paras007 --no-social
+npx paras007 --social
+npx paras007 --no-fact
+npx paras007 --fact
+`
+
+
 const options= {
     flags: {
         bio: {
@@ -55,9 +68,9 @@ const cli= meow(helptext,options)
     // console.log('cli.flags',cli.flags)
     // console.log('cli.input',cli.input)
     // alert({type: 'success', msg: 'showVersion fn'})
-    // console.log(cli.showVersion()) //includes process.exit
+    // console.log(cli.showVersion()) //includes process.exit and show version formpkgjson file and is also executed when provided with a --version flag
     // alert({type: 'success', msg: 'showHelp fn'})
-    // console.log(cli.showHelp())  //includes process.exit
+    // console.log(cli.showHelp())  //includes process.exit and show helptext and is also executed when provided with a --help flag
     
 })()
 
