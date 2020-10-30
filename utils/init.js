@@ -3,6 +3,7 @@ const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
 const pkgJSON= require('./../package.json')
 const boxen= require('boxen')
+const { black } = require('chalk')
 
 module.exports= (flags)=>{
     unhandled()
@@ -21,7 +22,7 @@ module.exports= (flags)=>{
     })
     
     flags.minimal && flags.clear && process.stdout.write(process.platform==='win32'? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H' )
-    flags.minimal && console.log(`\n${boxen('Paras Arora',{borderStyle: "double", borderColor: "redBright"})}\n`)
+    flags.minimal && console.log(`\n${boxen('Paras Arora',{borderStyle: "double", backgroundColor: "blackBright", padding:1})}\n`)
 
     checkNode('10')
    

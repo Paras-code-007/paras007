@@ -1,18 +1,19 @@
 const meow= require('meow')
 const {green, yellow, cyan}= require('chalk')
+const chalk = require('chalk')
 
 const helptext= `
 Usage
 ${green('npx paras007')} ${cyan('[--options]')} ${yellow('<input>')}
 
-Flags/Options + alias                          Defaults
-${cyan('--bio')},${cyan(' -b')}         : to display bio,              true
-${cyan('--projects')},${cyan(' -p')}    : to display projects,         true
-${cyan('--social')},${cyan(' -s')}      : to display socialHandles,    true
-${cyan('--fact')},${cyan(' -f')}        : to display funfact,          true
-${cyan('--debug')},${cyan(' -d')}       : to debug the cli             false
-${cyan('--minimal')},${cyan(' -m')}     : to show minimal information  false
-${cyan('--clear')},${cyan(' -c')}       : to clear console before run  false
+Flags/Options + alias                          ${chalk.dim('Defaults')}
+${cyan('--bio')},${cyan(' -b')}         : to display bio,              ${chalk.dim('true')}
+${cyan('--projects')},${cyan(' -p')}    : to display projects,         ${chalk.dim('true')}
+${cyan('--social')},${cyan(' -s')}      : to display socialHandles,    ${chalk.dim('true')}
+${cyan('--fact')},${cyan(' -f')}        : to display funfact,          ${chalk.dim('true')}
+${cyan('--debug')},${cyan(' -d')}       : to debug the cli             ${chalk.dim('false')}
+${cyan('--minimal')},${cyan(' -m')}     : to show minimal information  ${chalk.dim('false')}
+${cyan('--clear')},${cyan(' -c')}       : to clear console before run  ${chalk.dim('false')}
 ${cyan('--help')}            : for help
 ${cyan('--version')},${cyan(' -V')}     : for pkg/CLI version
 
