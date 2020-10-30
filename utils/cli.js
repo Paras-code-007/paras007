@@ -11,6 +11,8 @@ ${cyan('--projects')},${cyan(' -p')}      : to display projects, default true
 ${cyan('--social')},${cyan(' -s')}        : to display socialHandles, default true
 ${cyan('--fact')},${cyan(' -f')}          : to display funfact, default true
 ${cyan('--debug')},${cyan(' -d')}         : to debug the cli
+${cyan('--minimal')},${cyan(' -m')}         : to show minimal information
+${cyan('--clear')},${cyan(' -c')}         : to clear the console before cli run
 ${cyan('--help')}              : for help
 ${cyan('--version')},${cyan(' -V')}       : for pkg/CLI version
 

@@ -5,6 +5,8 @@ const pkgJSON= require('./../package.json')
 
 module.exports= (flags)=>{
     unhandled()
+
+    let clear= flags.clear
     
     !flags.minimal && welcome({
         title: "paras007",
@@ -12,7 +14,7 @@ module.exports= (flags)=>{
         bgColor: `#708090`,
         color: `#000000`,
         bold: true,
-        clear: flags.clear,
+        clear,
         version: `${pkgJSON.version}`,
         description: pkgJSON.description
     })
