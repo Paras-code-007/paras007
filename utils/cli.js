@@ -5,12 +5,13 @@ Usage
 npx paras007 [options]
 
 Flags/Options + alias
---bio -b to display bio, default true
---projects -p to display projects, default true
---social -s to display socialHandles, default true
---fact -f to display funfact, default true
---help for help
---version for pkg version
+--bio -b          : to display bio, default true
+--projects -p     : to display projects, default true
+--social -s       : to display socialHandles, default true
+--fact -f         : to display funfact, default true
+--debug           : to debug the cli
+--help            : for help
+--version         : for pkg version
 
 Examples
 use --no-flag or -alias-f to set these flags to false
@@ -41,8 +42,12 @@ const options= {
             type: 'boolean',
             default: true,
             alias: 'f'
+        },
+        debug: {
+            type: 'boolean',
+            default: false,
+            alias: 'd'
         }
-
     }
 }
 
