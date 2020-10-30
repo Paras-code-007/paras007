@@ -11,11 +11,11 @@ const args= process.argv.slice(2)
 ;(async ()=>{
 
     cli.input.includes('help') && cli.showHelp(0)  
-    init(cli.flags.minimal)
+    init(cli.flags)
     cli.flags.bio && console.log(bio)
     cli.flags.projects && console.log(projects)
     cli.flags.social && console.log(socialHandles)        
     cli.flags.fact && alert({type: 'info', msg: fact, name: 'fun fact'})
     debug(cli.flags.debug, cli.flags, cli.input)
-    
+
 })()

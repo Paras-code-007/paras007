@@ -60,6 +60,11 @@ const options= {
         minimal: {
             type: 'boolean',
             alias: 'm'
+        },
+        clear: {
+            type: 'boolean',
+            // default: 'false',
+            alias: 'c'
         }
     }
 }
