@@ -64,7 +64,12 @@ const options= {
             //other properties can be inherited from the default version flag provide by library
             // but still we are writing them
             // default: 'false'
-        }//package able to understand that we define an alias for an alredy existing flag
+        },//package able to understand that we define an alias for an alredy existing flag
+        minimal: {
+            type: 'boolean',
+            // default: false,  //not reqd
+            alias: 'm'
+        }
     }
 }
 

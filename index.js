@@ -12,9 +12,12 @@ const args= process.argv.slice(2) //to get only the flags and inputs and alias t
 
     cli.input.includes('help') && cli.showHelp(0)  //by default exit code of show help is 2 but say rightly executed thefore changed exitcode to 0
     // you can use echo $? to check previous command exitcode
-    init()
+    init(cli.flags.minimal)
     // Promise.reject(new Error('Unhandled'))  //for checking hard Rejection
-    if(cli.flags.bio) console.log(bio)
+    
+    // if(cli.flags.bio) console.log(bio)
+    // if can be replaced by &&   like this   (condition to met/return true) && do this
+    cli.flags.bio && console.log(bio)
     if(cli.flags.projects) console.log(projects)
     if(cli.flags.social) console.log(socialHandles)        
     if(cli.flags.fact) alert({type: 'info', msg: fact, name: 'fun fact'})

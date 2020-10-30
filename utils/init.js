@@ -3,10 +3,10 @@ const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
 const pkgJSON= require('./../package.json')
 
-module.exports= ()=>{
+module.exports= (minimal)=>{
     unhandled()
     
-    welcome({
+    !minimal && welcome({
         title: "paras007",
         tagLine: "run `npx paras007` to get know about me",
         bgColor: `#708090`,
@@ -17,6 +17,8 @@ module.exports= ()=>{
         description: pkgJSON.description
     })
     
+    minimal && console.log('\nParas Arora\n')
+
     checkNode('10')
    
 }
