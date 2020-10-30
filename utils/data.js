@@ -1,7 +1,6 @@
 const chalk= require('chalk')
 const logSymbols = require('log-symbols')
 
-
 const bio= `${chalk.cyan.inverse.bold(' Paras Arora - WEB DEVELOPER | AR VR Enthusiast ')}
 
 ${chalk.italic(`An aspiring enthusiast 
