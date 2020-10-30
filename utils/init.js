@@ -2,6 +2,7 @@ const welcome= require('cli-welcome')
 const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
 const pkgJSON= require('./../package.json')
+const boxen= require('boxen')
 
 module.exports= (flags)=>{
     unhandled()
@@ -19,7 +20,8 @@ module.exports= (flags)=>{
         description: pkgJSON.description
     })
     
-    flags.minimal && console.log('\nParas Arora\n')
+    flags.minimal && flags.clear && process.stdout.write(process.platform==='win32'? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H' )
+    flags.minimal && console.log(`\n${boxen('Paras Arora',{borderStyle: "double", borderColor: "redBright"})}\n`)
 
     checkNode('10')
    
