@@ -16,7 +16,8 @@
         "log-symbols": "^4.0.0",
         "meow": "^8.0.0",
         "node-fetch": "^2.6.1",
-        "node-vercheck": "^1.0.0"
+        "node-vercheck": "^1.0.0",
+        "ora": "^5.1.0"
     },
     "keywords": [
         "paras",
