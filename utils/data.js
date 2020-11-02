@@ -19,10 +19,14 @@ ${chalk.inverse.bold.hex('#86888a')(' LinkedIn: ')} ${chalk.dim.underline('https
 ${chalk.bold.bgYellow(' Portfolio: ')} ${chalk.dim.underline('http://parascode007.com')}`
 
 const fact= `paras is cool`
+const headrepo= 'Paras-code-007'
+const sbrepo= 'Repositories'
 
 module.exports= {
     bio,
     socialHandles,
     projects,
-    fact
+    fact,
+    headrepo,
+    sbrepo
 }
