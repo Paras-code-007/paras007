@@ -3,7 +3,6 @@ const checkNode= require('node-vercheck')
 const unhandled= require('cli-handle-unhandled')
 const pkgJSON= require('./../package.json')
 const boxen= require('boxen')
-const { black } = require('chalk')
 
 module.exports= (flags)=>{
     unhandled()

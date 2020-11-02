@@ -10,7 +10,7 @@ const apiUrl= 'https://api.github.com/users/Paras-code-007'
 module.exports= async ()=>{
     const spinner = ora({text: ''})
     spinner.start(`${yellow('FOLLOWERS:')} fetching from github...`)
-    const [err,res]= await to(axios.get(apiUrl)   )
+    const [err,res]= await to(axios.get(apiUrl))
     handleError('API CALL FAILED',err,true,true)
 
     const ghfollower= res.data.followers

@@ -68,6 +68,11 @@ const options= {
             type: 'boolean',
             // default: 'false',
             alias: 'c'
+        },
+        repos: {
+            type: 'boolean',
+            default: false,
+            alias: 'r'
         }
     }
 }
