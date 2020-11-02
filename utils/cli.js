@@ -14,6 +14,7 @@ ${cyan('--fact')},${cyan(' -f')}        : to display funfact,          ${chalk.d
 ${cyan('--debug')},${cyan(' -d')}       : to debug the cli             ${chalk.dim('false')}
 ${cyan('--minimal')},${cyan(' -m')}     : to show minimal information  ${chalk.dim('false')}
 ${cyan('--clear')},${cyan(' -c')}       : to clear console before run  ${chalk.dim('false')}
+${cyan('--repos')},${cyan(' -r')}       : to display my github repos   ${chalk.dim('false')}
 ${cyan('--help')}            : for help
 ${cyan('--version')},${cyan(' -V')}     : for pkg/CLI version
 
