@@ -35,7 +35,7 @@ const args= process.argv.slice(2)
     const response2= await prompt(questions)
     console.log(response2)
 
-    const prompts= new Toggle({
+    let prompts= new Toggle({
         name: 'likes',
         message: 'like my cli'
     })
@@ -43,15 +43,25 @@ const args= process.argv.slice(2)
     const response3= await prompts.run()
     console.log(response3)
 
-    const prompts= new Toggle({
+    prompts= new Toggle({
         // name: 'likes',
         message: 'like my cli',
         enabled: 'yes i liked it',
-        disbaled:  'nah! it was shit'
+        disabled:  'nah! it was shit'
     })
 
     const response4= await prompts.run()
     console.log(response4)
+
+    prompts= new Toggle({
+        // name: 'likes',
+        message: 'tell us about ur class?',
+        enabled: '2020',
+        disabled:  '2021'
+    })
+
+    const isclass2020= await prompts.run()
+    console.log('isclass2020',isclass2020)
 
     // cli.input.includes('help') && cli.showHelp(0)  
     // init(cli.flags)
